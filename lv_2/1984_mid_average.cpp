@@ -20,7 +20,8 @@ int main(int argc, char** argv)
             cin >> arr[i];
         
         sort(arr.begin(), arr.end());
-
+        
+        // float형 변수에 정수 / 정수 하면 몫은 정수로 나온다. 정수 / 실수 형태로 해야 실수 형태의 몫이 나온다.
         float sum = (accumulate(arr.begin(), arr.end(), 0) - arr.front() - arr.back()) / (double)(arr.size() - 2);
         int ans = floor(sum + 0.5);
 
